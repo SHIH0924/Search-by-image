@@ -11,23 +11,24 @@ def Integrate_Search():
     result_path=openfile.open_folder()
     cd = ColorDescriptor.ColorDescriptor((8,12,3))
 
-    # load the query image and describe it
+    # 加載查詢圖像並描述它
     filequery = cv2.imread(query)
     features = cd.describe(filequery)
 
-    # perform the search
+    # 執行搜索
     searcher = Searcher1.Searcher("1.csv")
     results = searcher.search(features)
 
-
-    # display the query
+    print(results)
+    # 顯示要查詢的圖片
     cv2.imshow("Query", filequery)
 
 
-    # loop over the results
+    # 循環結果
     for(score, resultID) in results:
-        # load the result image and display it
+        # 加載結果圖像並儲存
         print("1.csv"+"/"+resultID)    
-        result = cv2.imread(result_path+"/"+resultID)  
+        result = cv2.imread(result_path+"/"+resultID)
         cv2.imwrite(str(resultID)+'', result)
-        cv2.waitKey(0)
+    cv2.waitKey(0)
+    

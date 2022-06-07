@@ -7,20 +7,20 @@ import openfile
 def Integrate_Index():
     cd = ColorDescriptor.ColorDescriptor((8,12,3))
     dataset=openfile.open_folder()
-    #Open the output index file for writing
+    # 打開輸出索引文件進行寫入
     output = open("1.csv","w")
 
-    # use glob to grab the image paths and loop over them
+    # 使用 glob 抓取圖像路徑並循環
     for imagePath in glob.glob(dataset+"/*.jpg"):
         # extract the image ID from the image
         imageID = imagePath[imagePath.rfind("\\")+1:]
         image = cv2.imread(imagePath)
 
-        # describe the image
+        # 描述圖像
         features = cd.describe(image)
 
-        # write feature to file
+        # 將特徵寫入文件
         features = [str(f) for f in features]
         output.write("%s,%s\n" %(imageID,",".join(features)))
-    # close index file
+    # 關閉索引文件
     output.close()

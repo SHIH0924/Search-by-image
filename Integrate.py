@@ -14,9 +14,13 @@ root.title('以圖搜圖')
 root.geometry('290x155')
 # 視窗[左右, 上下]是否可拉大拉小，若都為0則視窗右上角的最大化按鈕會無法點擊
 root.resizable(1, 1)
+# 創建文字
 lab=tk.Label(root,text='匯入或更新資料庫:')
+# 匯入並設定位置
 lab.grid(row=0,column=0,pady=10,padx=10)
+# 創建按鈕
 mybutton = tk.Button(root, text='Index',width='15', height='2', command=button_Index)
+# 匯入並設定位置
 mybutton.grid(row=0,column=1,pady=10)
 lab1=tk.Label(root,text='需收尋圖片及收尋資料夾:')
 lab1.grid(row=1,column=0,padx=10)
@@ -24,6 +28,5 @@ mybutton1 = tk.Button(root, text='Search',width='15', height='2', command=button
 mybutton1.grid(row=1,column=1)
 mybutton2 = tk.Button(root, text='Quit',width='10', height='1', command=root.destroy)
 mybutton2.grid(row=2,column=0,pady=10,padx=10)
-
 # 自動刷新畫面
 root.mainloop()

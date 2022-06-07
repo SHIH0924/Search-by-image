@@ -8,7 +8,7 @@ def Integrate_Index():
     cd = ColorDescriptor.ColorDescriptor((8,12,3))
     dataset=openfile.open_folder()
     # 打開輸出索引文件進行寫入
-    output = open("1.csv","w")
+    output = open("index.csv","w")
 
     # 使用 glob 抓取圖像路徑並循環
     for imagePath in glob.glob(dataset+"/*.jpg"):

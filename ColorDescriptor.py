@@ -4,7 +4,7 @@ import cv2
 
 class ColorDescriptor:
     def __init__(self, bins):
-        # store the number of bins for the HSV histogram
+        # 存儲 HSV 直方圖bin的數量
         self.bins = bins
 
     def describe(self, image):

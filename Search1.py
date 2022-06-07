@@ -16,7 +16,7 @@ def Integrate_Search():
     features = cd.describe(filequery)
 
     # 執行搜索
-    searcher = Searcher1.Searcher("1.csv")
+    searcher = Searcher1.Searcher("index.csv")
     results = searcher.search(features)
 
     print(results)
@@ -27,7 +27,7 @@ def Integrate_Search():
     # 循環結果
     for(score, resultID) in results:
         # 加載結果圖像並儲存
-        print("1.csv"+"/"+resultID)    
+        print("index.csv"+"/"+resultID)    
         result = cv2.imread(result_path+"/"+resultID)
         cv2.imwrite(str(resultID)+'', result)
     cv2.waitKey(0)

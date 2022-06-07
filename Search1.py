@@ -28,8 +28,9 @@ def Integrate_Search():
     for(score, resultID) in results:
         # 加載結果圖像並儲存 
         result = cv2.imread(result_path+"/"+resultID)
+        print(str(resultID))
         cv2.imshow(str(resultID)+'',result)
-        cv2.waitKey(4000)
+        cv2.waitKey(3000)
         cv2.destroyWindow(str(resultID)+'')
         cv2.waitKey(500)
         cv2.imwrite(str(resultID)+'', result)

@@ -1,4 +1,4 @@
-"CBIR(Content-Base Image Retrieval)--Similarity and Search"
+"CBIR--相似性和搜索"
 import numpy as np
 # use for processing index.csv
 import csv

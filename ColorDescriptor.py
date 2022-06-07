@@ -1,4 +1,4 @@
-"CBIR(Content-Base Image Retrieval)"
+"CBIR(基於內容的圖像檢索,Content-Base Image Retrieval)"
 import numpy as np
 import cv2
 

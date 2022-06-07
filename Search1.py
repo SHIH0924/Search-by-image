@@ -1,4 +1,4 @@
-"CBIR(Content-Base Image Retrieval)--Search"
+"CBIR--搜索"
 import argparse
 
 import cv2

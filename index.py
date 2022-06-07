@@ -1,4 +1,4 @@
-"CBIR(Content-Base Image Retrieval)--Extract Features and Indexing"
+"CBIR--提取特徵和索引"
 import ColorDescriptor
 import glob
 import cv2
